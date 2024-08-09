@@ -16,11 +16,12 @@ const PORT = process.env.PORT || 5000;
 app.use(express.urlencoded({extended:true}));
 app.use(express.json()); 
 app.use(cookieParser());
-const corsOption={
-    origin:'https://66b623b6a1159f80237898a7--guileless-lolly-8e0425.netlify.app',
-    credentials:true
+
+const corsOptions = {
+    origin: 'https://66b623b6a1159f80237898a7--guileless-lolly-8e0425.netlify.app',
+    credentials: true
 };
-app.use(cors(corsOption)); 
+app.use(cors(corsOptions));
 
 
 // routes
